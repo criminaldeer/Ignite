@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#1</title>
+</head>
+<body>
+    <script>
+        var value = 0;
+        function f() {
+            if (1) {
+               value = true;
+            } else {
+                var value = false;
+            }
+            alert( value );
+        }
+        f();
+        alert(value);
+
+        // if var - value == true; присвоєння спрацьовує на локальній
+        // without var - value == true; змінеться зовнішня, але але лишається true, vsr mskes scope
+
+    </script>
+</body>

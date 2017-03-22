@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Task 3</title>
+</head>
+<body>
+    <script>
+        var arr = [[1,2], 7,  [3,4], [5,6]];
+
+        function bigToSmall(array) {
+            var result = [];
+            for (var j = 0; j < array.length; j++) {
+                if (!Array.isArray(array[j])){
+                    result.push(array[j]);
+                } else {
+                    for (var i = 0; i < array[j].length; i++) {
+                        result.push(array[j][i]);
+                    }
+                }
+            }
+            console.log(result);
+            result = result.reverse().join(' > ');
+            return result;
+        }
+
+        console.log(bigToSmall(arr));
+
+        /*function bigToSmall(array) {
+            var result = [];
+            for (var i = 0; i < array.length; i++) {
+                if (!Array.isArray(array[i])) {
+                    result.push(array[i]);
+                } else {
+                    result = result.concat(bigToSmall(array[i]));
+                }
+            }
+            result = result.reverse().join(' > ');
+            return result;
+        }
+
+        console.log(bigToSmall(arr));
+
+        arr.reverse(); */
+    </script>
+</body>
+</html>

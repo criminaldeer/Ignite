@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#1</title>
+</head>
+<body>
+<script>
+    function counter() {
+        counter.currentCount = 1;
+
+        return {
+            countCall: function() {
+                return counter.currentCount++;
+            }
+        }
+    }
+
+    var countFunction = counter();
+
+    console.log(countFunction.countCall());
+    console.log(countFunction.countCall());
+    console.log(countFunction.countCall());
+    console.log(countFunction.countCall());
+
+</script>
+</body>
+</html>

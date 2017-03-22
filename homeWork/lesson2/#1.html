@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home task #1</title>
+</head>
+<body>
+    <script>
+        function takeNumber() {
+            var result = 0;
+
+            return function(number) {
+                return result += number;
+            };
+        }
+
+        var sumFunc = takeNumber();
+
+        console.log(sumFunc(3));
+
+        console.log(sumFunc(7));
+
+        console.log(sumFunc(215));
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Task 1</title>
+</head>
+<body>
+    <script>
+        function find(arr, value) {
+            if (arr.includes(value)) {
+                return arr.indexOf(value);
+            } else {
+                return -1;
+            }
+        }
+        var array = [3, 5, "Hello", true, 7, -9];
+
+        console.log(find(array, true));
+        console.log(find(array, false));
+
+        function inArray(arr, value) {
+            var arrayIndex = arr.indexOf(value);
+            if (arrayIndex > -1) {
+                return arrayIndex;
+            } else {
+                return -1;
+            }
+        }
+
+        console.log(inArray(array, true));
+        console.log(inArray(array, false));
+    </script>
+</body>
+</html>

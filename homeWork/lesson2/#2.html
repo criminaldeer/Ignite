@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home task #2</title>
+</head>
+<body>
+    <script>
+       /* function countStrings(obj) {
+            var counter = 0;
+
+            for (key in obj) {
+                if ("string" === typeof obj[key]) {
+                    counter++
+                }
+            }
+            return counter;
+        }
+        var myObj = {
+            first: "1",
+            second: "2",
+            third: false,
+            fourth: ["anytime",2,3,4],
+            fifth:  null
+        };
+*/
+
+        function countStrings(obj) {
+            var counter = 0;
+
+            for (key in obj) {
+                if ("string" === typeof obj[key]) {
+                    counter++
+                } else if ("object" === typeof obj[key]) {
+                    for (var property in obj[key]) {
+                            if ("string" === typeof obj[key][property]) {
+                                counter++;
+                            }
+                    }
+                }
+            }
+            return counter;
+        }
+        var myObj = {
+            first: "1",
+            second: "2",
+            third: false,
+            fourth: ["anytime",2,3,4],
+            fifth:  null
+        };
+        console.log(countStrings(myObj));
+
+    </script>
+</body>
+</html>
