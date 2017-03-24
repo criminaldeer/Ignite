@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>#2</title>
 </head>
 <body>
+    <script>
+        function Calculator() {
+            this.read = function() {
+                this.num1 = prompt("Enter the first number, please");
+                this.num2 = prompt("Enter the second number, please");
+            };
+            this.sum = function() {
+                return +this.num1 + +this.num2;
+            }
+            this.mul = function() {
+                return this.num1 * this.num2;
+            }
+        }
 
+        var calculator = new Calculator();
+
+        calculator.read();
+        alert("Sum = " + calculator.sum());
+        alert("Product = " + calculator.mul());
+    </script>
 </body>
 </html>

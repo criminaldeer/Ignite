@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>#3</title>
 </head>
 <body>
-
+    <script>
+        function Summator() {
+            this.sum = function(a,b) {
+                alert(result = +a + +b);
+            };
+            this.run = function() {
+                a = prompt("Please, enter the first number");
+                b = prompt("PLease, enter the second number");
+                this.sum(a,b);
+            }
+        }
+        new Summator().run();
+    </script>
 </body>
 </html>

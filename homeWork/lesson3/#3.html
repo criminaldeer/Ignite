@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home Task #3</title>
 </head>
 <body>
+    <script>
+        function Ladder() {
+            this.step = 0;
+            this.up = function() { // вверх по лестнице
+                this.step++;
+                return this;
+            };
+            this.down = function() { // вниз по лестнице
+                this.step--;
+                return this;
+            };
+            this.showStep = function() { // вывести текущую ступеньку
+                alert( this.step );
+                return this;
+            }
+        }
 
+        var myLadder = new Ladder();
+
+        myLadder.up().up().down().up().down().showStep();
+    </script>
 </body>
 </html>

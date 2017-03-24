@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home task #2</title>
 </head>
 <body>
+    <script>
+        function runString(arg, obj) {
+            return this.obj.func(arg);
+        }
 
+        var arg = 9;
+        obj = {
+            param: "smth",
+            func: function(num) {
+                return Math.sqrt(num);
+            }
+        };
+
+        console.log(runString(arg,obj));
+
+    </script>
 </body>
 </html>

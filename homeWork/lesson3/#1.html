@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home task 1</title>
 </head>
 <body>
+<script>
+    function add(a) {
+        var result = a;
 
+        function f(b){
+            result += b;
+            return f;
+        }
+
+        f.toString = function () {
+            return result
+        };
+
+        return f;
+    }
+
+    console.log (add(1)(2));
+    console.log(add(1)(2)(3));
+    console.log(add(5)(-1)(2));
+    console.log(add(6)(-1)(-2)(-3));
+    console.log(add(0)(1)(2)(3)(4)(5));
+</script>
 </body>
 </html>
